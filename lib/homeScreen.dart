@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sleep_app/MeditationPage.dart';
 import 'package:sleep_app/music.dart';
+import 'package:sleep_app/profile.dart';
 import 'package:sleep_app/sleep.dart';
 
 class Homescreen extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomescreenState extends State<Homescreen> {
   const SleepPage(),
   MeditationPage(),
   MusicPage(), // <- your custom Music page
-  const ProfilePage(),
+  ProfilePage(),
 ];
 
 
@@ -35,19 +36,19 @@ class _HomescreenState extends State<Homescreen> {
           ? Container(
               height: double.infinity,
               width: double.infinity,
-              decoration: const BoxDecoration(
+              decoration:  BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/images/sleep.png"),
                   fit: BoxFit.cover,
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding:  EdgeInsets.all(20),
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
-                      const SizedBox(height: 20),
-                      const Text(
+                       SizedBox(height: 20),
+                       Text(
                         "Sleep Stories",
                         style: TextStyle(
                           color: Colors.white,
@@ -80,8 +81,8 @@ class _HomescreenState extends State<Homescreen> {
                                   color: Colors.white,
                                 ),
                               ),
-                              const SizedBox(height: 4),
-                              const Text(
+                               SizedBox(height: 4),
+                               Text(
                                 "All",
                                 style: TextStyle(
                                   color: Colors.white,
@@ -291,14 +292,14 @@ class _HomescreenState extends State<Homescreen> {
                                         ),
                                     ],
                                   ),
-                                  const SizedBox(height: 10),
+                                   SizedBox(height: 10),
                                   Column(
                                     children: [
                                       Container(
                                         height: 120,
                                         width: 150,
                                         decoration: BoxDecoration(
-                                          image: const DecorationImage(
+                                          image:  DecorationImage(
                                             image: AssetImage("assets/images/s2.png"),
                                             fit: BoxFit.cover,
                                           ),
@@ -357,21 +358,6 @@ class _HomescreenState extends State<Homescreen> {
           BottomNavigationBarItem(icon: Icon(Icons.music_note), label: "Music"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
-      ),
-    );
-  }
-}
-
-
-
-
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("Shaon das", style: TextStyle(fontSize: 24)),
       ),
     );
   }
